@@ -1,0 +1,141 @@
+#blink {
+    -webkit-animation: blink 1.4s linear infinite;
+    animation: blink 1.4s linear infinite;
+  }
+  @-webkit-keyframes blink {
+    50% { color: rgb(34, 34, 34); }
+    51% { color: rgba(34, 34, 34, 0); }
+    100% { color: rgba(34, 34, 34, 0); }
+  }
+  
+
+h1{ 
+    color: red;
+    text-transform:uppercase;
+}
+video{
+    position: relative;
+    width: 1440px;
+}
+.qqq{
+    position: absolute;
+    transform: translate(0px, -500px);
+}
+body {
+    /* background-image: url(../img/mk.jpg);
+    background-size: cover; */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    text-align: center;
+}
+
+h2 {
+    color: rgb(255, 106, 106);
+    margin: 0;
+}
+
+
+
+.animation {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 1400px;
+}
+
+.card {
+    border-radius: 30px;
+    align-items: center;
+ 
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    position: absolute;
+    transform-origin: bottom;
+    width: 200px;
+    height: 380px;
+
+    animation-name: move-cards;
+    animation-duration: 28s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+}
+
+.pic {
+    margin-bottom: 50px;
+    max-width: 150px;
+    width: 100%;
+}
+
+.character-name {
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.card-1 {
+    animation-delay: -4s;
+}
+
+.card-2 {
+    animation-delay: -8s;
+}
+
+.card-3 {
+    animation-delay: -12s;
+}
+
+.card-4 {
+    
+    animation-delay: -16s;
+}
+
+.card-5 {
+    animation-delay: -20s;
+}
+
+.card-6 {
+    animation-delay: -24s;
+}
+
+.card-7 {
+    animation-delay: -28s;
+}
+
+
+@keyframes move-cards { 
+    0% { 
+        z-index: -1;
+        transform: translateX(1200px) scale(0.6);
+    }
+    14.3% {
+        z-index: 0;
+        transform: translateX(0) scale(0.6);
+    }
+    28.6% {
+        transform: translateX(170px) scale(0.8);
+    }
+    42.9% {
+        transform: translateX(380px) scale(1);
+    }
+    57.7% {
+        transform: translateX(600px) scale(1);
+    }
+    71.5% {
+        transform: translateX(805px) scale(1);
+    }
+    85.8% {
+        transform: translateX(1015px) scale(0.8);
+    }
+    100% {
+        z-index: 10;
+        transform: translateX(1200px) scale(0.6);
+    }  
+}
+
+.animation:hover .card {
+    animation-play-state: paused;
+  cursor: pointer;
+}
